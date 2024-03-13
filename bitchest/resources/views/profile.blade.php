@@ -7,7 +7,6 @@
 </head>
 <body>
 <header>
-    <img src="../images/Graphic-Decentralized-Box-p-800.png" alt="">
     <nav style="display: flex; justify-content:space-around;">
         <a href="#">profile</a>
         <a href="#">achat-vente</a>
