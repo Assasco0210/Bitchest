@@ -57,22 +57,29 @@ class IndexController extends Controller
     }
 
     public function handleLogin(Request $request)
-    {
-        // Validez les données du formulaire
-        $validatedData = $request->validate([
-            'username' => 'required|max:255',
-            'password' => 'required',
-        ]);
+{
+    // Validez les données du formulaire
+    $validatedData = $request->validate([
+        'username' => 'required|max:255',
+        'password' => 'required',
+    ]);
 
-        // Essayez de connecter l'utilisateur
-        if (Auth::attempt($validatedData)) {
-            // Si la connexion réussit, redirigez l'utilisateur vers la page d'accueil
-            return redirect('/');
+    // Essayez de connecter l'utilisateur
+    if (Auth::attempt($validatedData)) {
+        // Si la connexion réussit, vérifiez si l'utilisateur est un administrateur
+        if (Auth::user()->role == 'admin') {
+            // Si l'utilisateur est un administrateur, redirigez-le vers le tableau de bord de l'administrateur
+            return redirect()->route('admin.dashboard');
         } else {
-            // Si la connexion échoue, redirigez l'utilisateur vers la page de connexion avec un message d'erreur
-            return redirect('/connexion')->withErrors([
-                'username' => 'Les informations d\'identification fournies ne correspondent pas à nos enregistrements.',
-            ]);
+            // Si l'utilisateur n'est pas un administrateur, redirigez-le vers sa page de profil
+            return redirect()->route('profile', ['user' => Auth::user()]);
         }
+    } else {
+        // Si la connexion échoue, redirigez l'utilisateur vers la page de connexion avec un message d'erreur
+        return redirect('/connexion')->withErrors([
+            'username' => 'Les informations d\'identification fournies ne correspondent pas à nos enregistrements.',
+        ]);
     }
+}
+    
 }
