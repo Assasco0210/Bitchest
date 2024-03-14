@@ -17,3 +17,7 @@ Route::get('/reset-password/{token}', [AuthController::class, 'showResetPassword
 Route::post('/reset-password', [AuthController::class, 'resetPassword']);
 
 Route::get('/profile', [ProfileController::class, 'showProfile']);
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+});

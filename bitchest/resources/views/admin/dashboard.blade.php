@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Tableau de bord de l'administrateur</title>
@@ -7,42 +8,51 @@
     <style>
         body {
     font-family: 'Célias', sans-serif;
-    background-color: #38618C;
+    background: linear-gradient(to right, #38618C, #35A7FF);
     color: #FFFFFF;
 }
 
 #sidebar {
     position: fixed;
-    width: 200px;
+    width: 300px;
     height: 100%;
-    background-color: #35A7FF;
+    background: linear-gradient(to bottom, #35A7FF, #38618C); 
     padding: 20px;
     box-sizing: border-box;
 }
 
 #sidebar h1 {
-    color: #01FF19;
+    color: #38618C; 
     font-size: 24px;
 }
 
 #sidebar ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0; 
+}
+
+#sidebar ul li {
+    margin-bottom: 15px; 
 }
 
 #sidebar ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
+   color:#FFFFFF; 
+   text-decoration:none; 
+   font-size :18px;  
+}
+
+#sidebar ul li a:hover {
+   color:#01FF19; 
 }
 
 #main {
-    margin-left: 220px;
-    padding: 20px;
-    box-sizing: border-box;
+   margin-left :220px; 
+   padding :20px;  
+   box-sizing:border-box ;  
 }
 
 form {
-    background-color: #FF5964;
+    background: linear-gradient(to bottom, #FF5964, #35A7FF);
     padding: 20px;
     box-sizing: border-box;
 }
@@ -63,6 +73,7 @@ form input[type="submit"] {
 
     </style>
 </head>
+
 <body>
     <div id="sidebar">
         <h1>Dashboard</h1>
@@ -79,4 +90,5 @@ form input[type="submit"] {
         <!-- Le contenu de chaque page sera affiché ici -->
     </div>
 </body>
+
 </html>
