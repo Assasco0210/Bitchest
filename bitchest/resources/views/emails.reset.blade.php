@@ -2,6 +2,27 @@
 <html>
 <head>
     <title>Réinitialisation du mot de passe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Celias&display=swap');
+
+        body {
+            font-family: 'Celias', sans-serif;
+            color: #FFFFFF; /* Blanc */
+            background-color: #38618C; /* Bleu foncé */
+        }
+
+        h1 {
+            color: #01FF19; /* Vert fluo */
+        }
+
+        a {
+            color: #35A7FF; /* Bleu clair */
+        }
+
+        p {
+            color: #FF5964; /* Rose */
+        }
+    </style>
 </head>
 <body>
     <h1>Réinitialisation du mot de passe</h1>
