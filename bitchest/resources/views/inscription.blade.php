@@ -111,7 +111,7 @@
     </div>
     <section>
 
-        <form action="" method="get">
+    <form action="{{ url('/inscription') }}" method="post">
 
             <div>
                 <label for="name">Entrez votre nom :</label>
@@ -160,7 +160,7 @@
 
             <button type="submit">S'enregistrer</button>
 
-            <h4>Vous avez déjà un compte ? Alors <a href="./connection.blades.php">connectez-vous</a></h4>
+            <h4>Vous avez déjà un compte ? Alors <a href="{{ url('/connexion') }}">connectez-vous</a></h4>
         </form>
 
 

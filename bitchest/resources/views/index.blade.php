@@ -8,6 +8,6 @@
 <body> 
     <h1>Bienvenue sur notre site de trading</h1>
     <p>Découvrez nos services et commencez à trader dès maintenant !</p>
-    <a href="/inscription" class="btn btn-primary">c'est parti !</a>
+    <a href="{{ url('/inscription') }}" class="btn btn-primary">c'est parti !</a>
 </body>
 </html>
