@@ -14,3 +14,5 @@ Route::get('/forgot-password', [AuthController::class, 'showForgotPasswordForm']
 Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
 Route::get('/reset-password/{token}', [AuthController::class, 'showResetPasswordForm']);
 Route::post('/reset-password', [AuthController::class, 'resetPassword']);
+
+Route::get('/profile', 'ProfileController@showProfile');
