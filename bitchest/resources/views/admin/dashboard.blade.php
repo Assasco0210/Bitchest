@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Tableau de bord de l'administrateur</title>
-    <!-- Ajoutez ici vos liens CSS -->
     <style>
         body {
     font-family: 'Célias', sans-serif;
@@ -72,6 +71,7 @@ form input[type="submit"] {
 }
 
     </style>
+
 </head>
 
 <body>
@@ -87,7 +87,7 @@ form input[type="submit"] {
     </div>
 
     <div id="main">
-        <!-- Le contenu de chaque page sera affiché ici -->
+        @yield('content')
     </div>
 </body>
 
