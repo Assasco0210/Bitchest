@@ -52,9 +52,9 @@ class IndexController extends Controller
     }
 
     public function showLoginForm()
-    {
-        return view('connexion');
-    }
+{
+    return view('connexion');
+}
 
     public function handleLogin(Request $request)
 {

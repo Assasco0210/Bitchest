@@ -10,8 +10,14 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CryptoController;
 use App\Http\Controllers\NewsController;
 
+Route::get('/', [IndexController::class, 'index']);
+
 Route::get('/inscription', [IndexController::class, 'showRegistrationForm']);
 Route::post('/inscription', [IndexController::class, 'handleRegistration']);
+
+Route::get('/connexion', [AuthController::class, 'showLoginForm']);
+Route::post('/connexion', [AuthController::class, 'handleLogin']);
+
 Route::match(['get', 'post'], '/connexion', [AuthController::class, 'handleLogin']);
 
 Route::get('/forgot-password', [AuthController::class, 'showForgotPasswordForm']);
